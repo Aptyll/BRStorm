@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Game</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0a0a0a;
+            font-family: monospace;
+        }
+        canvas {
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+        #performanceMonitor {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: #4a9eff;
+            font-size: 12px;
+            font-family: monospace;
+            z-index: 1000;
+            border: 1px solid #333;
+        }
+        #stormTimer {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(168, 100, 253, 0.2);
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: rgba(168, 100, 253, 1);
+            font-size: 14px;
+            font-family: monospace;
+            z-index: 1000;
+            border: 1px solid rgba(168, 100, 253, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="performanceMonitor">
+        <div>FPS: <span id="fpsCounter">0</span></div>
+        <div>Frame Time: <span id="frameTime">0</span>ms</div>
+        <div>Memory: <span id="memoryUsage">N/A</span>MB</div>
+    </div>
+    <div id="stormTimer"></div>
+    <canvas id="gameCanvas" width="1024" height="768"></canvas>
+    <script src="scripts.js"></script>
+</body>
+</html>
